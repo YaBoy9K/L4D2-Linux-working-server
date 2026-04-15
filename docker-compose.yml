@@ -1,0 +1,12 @@
+services:
+  l4d2-server:
+    image: cm2network/steamcmd
+    container_name: l4d2_server
+    volumes:
+      - ./server:/home/steam/l4d2
+    working_dir: /home/steam/l4d2
+    ports:
+      - "27015:27015/udp"
+      - "27015:27015/tcp"
+    command: >
+      bash -lc "./srcds_run -game left4dead2 -console -usercon -ip 0.0.0.0 -port 27015 +map c8m1_apartment +maxplayers 8 +sv_gametypes versus +mp_gamemode versus"
