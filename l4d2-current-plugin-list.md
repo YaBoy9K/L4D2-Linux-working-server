@@ -47,7 +47,7 @@ These are the custom gameplay / fix plugins currently loaded.
 | 13 | [L4D1 & L4D2] Tank Rock Destroyer Announce | 1.1.1 | Mart | Announces which player destroyed a tank rock. Required translation file. | https://forums.alliedmods.net/showthread.php?p=2648989 |
 | 14 | Jockey jump | 1.0.3 | Die Teetasse | Lets jockey jump while riding a survivor. | https://forums.alliedmods.net/showthread.php?p=2583739 |
 | 15 | [L4D2] Smart Witch | 1.0.0 | Miuwiki | Changes witch target behavior so she chases another nearby survivor after killing/incapping a target. Required `witch_attack.txt`. | https://forums.alliedmods.net/showthread.php?p=2808062 |
-| 16 | L4D2 Pause | 0.2.1 | pvtschlag | Pause functionality for L4D2 servers. | [Source link not confirmed](https://forums.alliedmods.net/showthread.php?p=997585) |
+| 16 | L4D2 Pause | 0.2.1 | pvtschlag | Pause functionality for L4D2 servers. | https://forums.alliedmods.net/showthread.php?p=997585 |
 | 17 | L4D Assistance System | 1.6 | [E]c & Max Chu, SilverS & ViRaGisTe | Assistance/assist tracking system. Installed using attached `.smx`. | https://forums.alliedmods.net/showthread.php?p=1144728 |
 | 18 | L4D2 Tank-on-fire Speed Booster | 1.1 | DarkNoghri && Dirka_Dirka | Boosts tank speed while on fire. | https://forums.alliedmods.net/showthread.php?t=116014 |
 | 19 | [L4D2] Proper Impact Source | 0.2 | cravenge | Fixes impact source attribution. | https://forums.alliedmods.net/showthread.php?p=2770443 |
