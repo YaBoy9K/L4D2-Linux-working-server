@@ -191,7 +191,7 @@ sv_allow_lobby_connect_only "0"
 sv_visiblemaxplayers "8"
 sv_lan "0"
 
-sv_steamgroup "103582791475626439"
+sv_steamgroup "your steam group number"
 sv_steamgroup_exclusive "0"
 ```
 
@@ -204,7 +204,7 @@ Note: Some team balance/shuffle cvars do not work in L4D2 multiplayer and may sh
 The server is configured with a Steam group:
 
 ```cfg
-sv_steamgroup "103582791475626439"
+sv_steamgroup "your steam group number"
 sv_steamgroup_exclusive "0"
 ```
 
