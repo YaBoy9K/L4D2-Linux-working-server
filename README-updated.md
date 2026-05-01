@@ -184,7 +184,7 @@ The main server config file is:
 Current working `server.cfg` example:
 
 ```cfg
-hostname "YaBoy9K L4D2 Versus Server"
+hostname "L4D2 Versus Server"
 sv_gametypes "versus"
 mp_gamemode "versus"
 sv_allow_lobby_connect_only "0"
@@ -211,7 +211,7 @@ sv_steamgroup_exclusive "0"
 Steam group link:
 
 ```text
-https://steamcommunity.com/groups/L4D2-Yaboy9k
+https://steamcommunity.com/groups/"your steam group"
 ```
 
 However, the **Steam Group Servers** list in L4D2 can be unreliable. Even with the correct group ID, the server may not always appear for group members.
