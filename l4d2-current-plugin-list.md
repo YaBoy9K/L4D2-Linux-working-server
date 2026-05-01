@@ -52,14 +52,14 @@ These are the custom gameplay / fix plugins currently loaded.
 | 18 | L4D2 Tank-on-fire Speed Booster | 1.1 | DarkNoghri && Dirka_Dirka | Boosts tank speed while on fire. | https://forums.alliedmods.net/showthread.php?t=116014 |
 | 19 | [L4D2] Proper Impact Source | 0.2 | cravenge | Fixes impact source attribution. | https://forums.alliedmods.net/showthread.php?p=2770443 |
 | 20 | Jockey Pounce Damage | 1.0.3 | N3wton | Adds/adjusts damage for jockey pounce. | https://forums.alliedmods.net/showthread.php?p=1129674 |
-| 21 | Survivor Heal Info | 1.2 | CAPS LOCK FUCK YEAH | Shows survivor heal information. Required `healinfo.phrases.txt` translation file. | Source link not confirmed |
-| 22 | Incapped Magnum | 1.4 | Oshroth | Allows/adjusts Magnum use while incapped. | Source link not confirmed |
-| 23 | Grenade Transfer | 1.0 | DJ_WEST | Allows grenade/throwable transfer behavior. | Source link not confirmed |
+| 21 | Survivor Heal Info | 1.2 | CAPS LOCK FUCK YEAH | Shows survivor heal information. Required `healinfo.phrases.txt` translation file. | https://forums.alliedmods.net/showthread.php?p=1345541 |
+| 22 | Incapped Magnum | 1.4 | Oshroth | Allows/adjusts Magnum use while incapped. | https://forums.alliedmods.net/showthread.php?p=1109372 |
+| 23 | Grenade Transfer | 1.0 | DJ_WEST | Allows grenade/throwable transfer behavior. | https://forums.alliedmods.net/showthread.php?p=1128204 |
 | 24 | [L4D & L4D2] Tank Rock Bounces | 1.1 | SilverShot | Allows tank rocks to bounce. Requires Left 4 DHooks Direct. | https://forums.alliedmods.net/showthread.php?p=2807009 |
 | 25 | [L4D2] Witch_Double_Start_Fix | 1.0 | Lux | Fixes double witch startle behavior. Part of Witch Fixes. | https://forums.alliedmods.net/showthread.php?t=315481 |
 | 26 | [L4D1 & L4D2] Multi witches | 1.5.4 | Sheleu, fork by Dragokas | Allows multiple witches. | https://forums.alliedmods.net/showthread.php?p=2745084 |
 | 27 | [L4D & L4D2] Reverse Friendly-Fire | 2.9.2 | Mystik Spiral | Reverses friendly-fire damage so the attacker takes damage instead of the victim. | https://forums.alliedmods.net/showthread.php?p=2733421 |
-| 28 | L4DSwitchPlayers | 1.4 | SkyDavid / djromero | Lets admins switch/move players between teams. Appeared in an earlier loaded plugin list. | Source link not confirmed |
+| 28 | L4DSwitchPlayers | 1.4 | SkyDavid / djromero | Lets admins switch/move players between teams. Appeared in an earlier loaded plugin list. | https://forums.alliedmods.net/showthread.php?p=746082 |
 
 ---
 
