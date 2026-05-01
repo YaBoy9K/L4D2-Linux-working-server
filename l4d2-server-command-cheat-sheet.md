@@ -23,7 +23,7 @@ cd /mnt/l4d2/l4d2-server
 Use this if you are okay with the terminal staying attached to the server console.
 
 ```bash
-./srcds_run -game left4dead2 -console -usercon -ip 0.0.0.0 -port 27015 +map c8m1_apartment +maxplayers 8 +sv_gametypes versus +sv_allow_lobby_connect_only 0
+./srcds_run -game left4dead2 -console -usercon -ip 0.0.0.0 -port 27015 +mp_gamemode versus +map c8m1_apartment versus +maxplayers 8 +sv_gametypes versus +sv_allow_lobby_connect_only 0
 ```
 
 ---
