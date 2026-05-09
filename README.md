@@ -9,6 +9,7 @@ The final working setup uses a **native Linux server install** with:
 - SourceMod
 - Left 4 DHooks Direct
 - Custom SourceMod plugins
+- Modified Tank on Spawn plugin for guaranteed Versus Tank chapters
 - Versus mode configuration
 - Steam group configuration
 - `screen` for keeping the server running in the background
@@ -82,6 +83,7 @@ Folder layout:
 - SourceMod loads successfully
 - Left 4 DHooks Direct loads successfully
 - SourceMod plugins load successfully
+- Modified Tank on Spawn `1.30-ziggy1` loads successfully
 - Versus mode works when started with the correct command
 - SourceMod admin menu works after adding admin SteamID
 - Server can run in the background using `screen`
@@ -169,6 +171,51 @@ Stop the server safely from the server console:
 
 ```text
 quit
+```
+
+---
+
+## Current Custom Tank Setup
+
+The server currently uses a modified version of **[L4D1 & L4D2] Tank on Spawn**:
+
+```text
+[L4D] Tank on Spawn (1.30-ziggy1) by Dragokas
+```
+
+Purpose of the modified version:
+
+- Runs in **Versus only**.
+- Gives each chapter one guaranteed Tank opportunity after survivors leave saferoom.
+- Allows normal director Tanks to spawn naturally.
+- Does not force an extra Tank if the director already spawned one that chapter.
+- Enforces only **one living Tank at a time**.
+- Leaves Tank HP alone with `l4d_tank_on_spawn_control_hp "0"`, so Versus/default Tank HP stays normal.
+
+Important files:
+
+```text
+custom-plugins/tank-on-spawn-ziggy/addons/sourcemod/scripting/l4d_TankOnSpawn.sp
+custom-plugins/tank-on-spawn-ziggy/addons/sourcemod/translations/l4d_TankOnSpawn.phrases.txt
+custom-plugins/tank-on-spawn-ziggy/addons/sourcemod/gamedata/tankonspawn.txt
+custom-plugins/tank-on-spawn-ziggy/cfg/sourcemod/l4d_tank_on_spawn.cfg
+```
+
+Server install locations:
+
+```text
+left4dead2/addons/sourcemod/plugins/l4d_TankOnSpawn.smx
+left4dead2/addons/sourcemod/translations/l4d_TankOnSpawn.phrases.txt
+left4dead2/addons/sourcemod/gamedata/tankonspawn.txt
+left4dead2/cfg/sourcemod/l4d_tank_on_spawn.cfg
+```
+
+Compile command:
+
+```bash
+cd /mnt/l4d2/l4d2-server/left4dead2/addons/sourcemod/scripting
+./spcomp l4d_TankOnSpawn.sp
+cp l4d_TankOnSpawn.smx ../plugins/l4d_TankOnSpawn.smx
 ```
 
 ---
