@@ -1,0 +1,162 @@
+/*
+	Following named colors are supported:
+	 - {white}	(use instead of \x01 )
+	 - {cyan}	(use instead of \x03 )
+	 - {orange}	(use instead of \x04 )
+	 - {green}	(use instead of \x05 )
+*/
+
+"Phrases"
+{
+	"no_access"
+	{
+		"en"		"{cyan}[VoteTanks]{orange} You have no access to this vote."
+		"ru"		"{cyan}[VoteTanks]{orange} У вас нет доступа к этому голосованию."
+		"hu"		"{cyan}[VoteTanks]{orange} Nincs hozzáférésed ehhez a szavazáshoz."
+	}
+	"vote_in_progress"
+	{
+		"en"		"{cyan}[VoteTanks]{orange} Another vote is not over!"
+		"ru"		"{cyan}[VoteTanks]{orange} Другое голосование ещё не закончилось!"
+		"hu"		"{cyan}[VoteTanks]{orange} Még nincs vége egy másik szavazásnak!!"
+	}
+	"Yes"
+	{
+		"en"		"Yes"
+		"ru"		"Да"
+		"hu"		"Igen"
+	}
+	"No"
+	{
+		"en"		"No"
+		"ru"		"Нет"
+		"hu"		"Nem"
+	}
+	"too_often"
+	{
+		"en"		"{cyan}[VoteTanks]{orange} You can't vote too often!"
+		"ru"		"{cyan}[VoteTanks]{orange} Вы не можете голосовать слишком часто!"
+		"hu"		"{cyan}[VoteTanks]{orange} Nem szavazhatsz túl gyakran!"
+	}
+	"veto"
+	{
+		"en"		"{orange}Current vote is vetoed by {green}%N"
+		"ru"		"{orange}%N {orange}наложил вето на голосование"
+		"hu"		"{orange}A jelenlegi szavazás megszakítva {green}%N által"
+	}
+	"votepass"
+	{
+		"en"		"{orange}Current vote is passed by {green}%N"
+		"ru"		"{orange}%N {orange}принудительно продвинул голосование"
+		"hu"		"{orange}A jelenlegi szavazás sikeres {green}%N által"
+	}
+	"tank_count_vote"
+	{
+		"en"		"Change tank count to"
+		"ru"		"Изменить кол-во танков до"
+		"hu"		"Változtassuk meg a tankok számát"
+	}
+	"tank_hp_vote"
+	{
+		"en"		"Change tank health to"
+		"ru"		"Изменить здоровье танков до"
+		"hu"		"Változtassuk meg a tankok életerejét"
+	}
+	"set_count"
+	{
+		"#format"	"{1:i}"
+		"en"		"Set count [{1}]"
+		"ru"		"Установить кол-во [{1}]"
+		"hu"		"Beállított szám [{1}]"
+	}
+	"vote_count"
+	{
+		"#format"	"{1:i}"
+		"en"		"[VoteTanks] Vote for tanks count: {1}"
+		"ru"		"[VoteTanks] Голосование за кол-во танков: {1}"
+		"hu"		"[VoteTanks] Szavazz a tankok számáról: {1}"
+	}
+	"set_hp"
+	{
+		"#format"	"{1:i}"
+		"en"		"Set health [{1}]"
+		"ru"		"Установить здоровье [{1}]"
+		"hu"		"Életerő beállítása [{1}]"
+	}
+	"vote_hp"
+	{
+		"#format"	"{1:i}"
+		"en"		"[VoteTanks] Vote for tanks HP"
+		"ru"		"[VoteTanks] Голосование за здоровье танков: {1}"
+		"hu"		"[VoteTanks] Szavazz a tankok életerejéről"
+	}
+	"n_tanks"
+	{
+		"#format"	"{1:i}"
+		"en"		"{1} tank(s)"
+		"ru"		"{1} танк(ов)"
+		"hu"		"{1} tank(ok)"
+	}
+	"Select_Quantity"
+	{
+		"en"		"Select the quantity of tanks:"
+		"ru"		"Выберите количество танков:"
+		"hu"		"Válaszd ki a tankok mennyiségét:"
+	}
+	"Select_HP"
+	{
+		"en"		"Select the health of the tanks:"
+		"ru"		"На сколько здоровым должен быть танк?"
+		"hu"		"Válaszd ki a tankok életerejét:"
+	}
+	"count_is_set"
+	{
+		"#format"	"{1:i}"
+		"en"		"{green}Tanks count in wave is now: {orange}{1}"
+		"ru"		"{green}Кол-во танков в волне теперь: {orange}{1}"
+		"hu"		"{green}A Tankok száma hullámokban: {orange}{1}"
+	}
+	"hp_is_set"
+	{
+		"#format"	"{1:i}"
+		"en"		"{green}Tanks health is now: {orange}{1}"
+		"ru"		"{green}Здоровье танков теперь будет: {orange}{1}"
+		"hu"		"{green}A Tank életereje most: {orange}{1}"
+	}	
+	"tank_param"
+	{
+		"en"		"Tank settings:"
+		"ru"		"Настройки танков:"
+		"hu"		"Tank beállítások:"
+	}
+	"spawn_tank"
+	{
+		"en"		"Spawn tank(s)"
+		"ru"		"Создать танк(ов)"
+		"hu"		"Szülessen(ek) tank(ok)"
+	}
+	"vote_failed"
+	{
+		"en"		"{cyan}Vote {orange}is failed."
+		"ru"		"{cyan}Голосование {orange}провалилось."
+		"hu"		"{cyan}A szavazás {orange}nem sikerült."
+	}
+	"vote_success"
+	{
+		"en"		"{cyan}Vote {orange}is success."
+		"ru"		"{cyan}Голосование {orange}успешно."
+		"hu"		"{cyan}A szavazás {orange}sikeres."
+	}
+	"Tank"
+	{
+		"en"		"Tank"
+		"ru"		"Танк"
+		"hu"		"Tank"
+	}
+	"health"
+	{
+		"en"		"Health"
+		"ru"		"Здоровье"
+		"hu"		"Életerő"
+	}
+}
