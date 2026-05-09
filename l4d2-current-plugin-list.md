@@ -8,10 +8,17 @@ Generated from the server console command:
 sm plugins list
 ```
 
+
+Latest confirmed TankOnSpawn load line:
+
+```text
+40 "[L4D] Tank on Spawn" (1.30-ziggy1) by Dragokas
+```
+
 Latest known loaded count:
 
 ```text
-42 plugins
+44 plugins
 ```
 
 ---
@@ -58,8 +65,9 @@ These are the custom gameplay / fix plugins currently loaded.
 | 24 | [L4D & L4D2] Tank Rock Bounces | 1.1 | SilverShot | Allows tank rocks to bounce. Requires Left 4 DHooks Direct. | https://forums.alliedmods.net/showthread.php?p=2807009 |
 | 25 | [L4D2] Witch_Double_Start_Fix | 1.0 | Lux | Fixes double witch startle behavior. Part of Witch Fixes. | https://forums.alliedmods.net/showthread.php?t=315481 |
 | 26 | ~~[L4D1 & L4D2] Multi witches~~ | 1.5.4 | Sheleu, fork by Dragokas | Allows multiple witches. | https://forums.alliedmods.net/showthread.php?p=2745084 |
-| 27 | [L4D & L4D2] Reverse Friendly-Fire | 2.9.2 | Mystik Spiral | Reverses friendly-fire damage so the attacker takes damage instead of the victim. | https://forums.alliedmods.net/showthread.php?p=2733421 |
-| 28 | L4DSwitchPlayers | 1.4 | SkyDavid / djromero | Lets admins switch/move players between teams. Appeared in an earlier loaded plugin list. | https://forums.alliedmods.net/showthread.php?p=746082 |
+| 27 | [L4D1 & L4D2] Tank on Spawn - Ziggy modified | 1.30-ziggy1 | Dragokas, modified locally | Guarantees one Tank opportunity each Versus chapter after saferoom; allows normal director Tanks; blocks two living Tanks; HP control disabled so Versus HP stays default. Requires `l4d_TankOnSpawn.phrases.txt`, `tankonspawn.txt`, and `l4d_tank_on_spawn.cfg`. | https://forums.alliedmods.net/showthread.php?t=323813 |
+| 28 | [L4D & L4D2] Reverse Friendly-Fire | 2.9.2 | Mystik Spiral | Reverses friendly-fire damage so the attacker takes damage instead of the victim. | https://forums.alliedmods.net/showthread.php?p=2733421 |
+| 29 | L4DSwitchPlayers | 1.4 | SkyDavid / djromero | Lets admins switch/move players between teams. Appeared in an earlier loaded plugin list. | https://forums.alliedmods.net/showthread.php?p=746082 |
 
 ---
 
@@ -103,6 +111,42 @@ Some plugins required extra files beyond `.smx`:
 | Survivor Heal Info | `healinfo.phrases.txt` | `addons/sourcemod/translations/` |
 | Reverse Friendly-Fire | `l4d_reverse_ff.phrases.txt`, `l4d2_reverse_ff.cfg` | `translations/`, `cfg/sourcemod/` |
 | Left 4 DHooks Direct | `left4dhooks.smx`, `left4dhooks.l4d2.txt`, `lux_library.txt`, include files, data cfg | `plugins/`, `gamedata/`, `scripting/include/`, `data/` |
+| Tank on Spawn - Ziggy modified | `l4d_TankOnSpawn.smx`, `l4d_TankOnSpawn.phrases.txt`, `tankonspawn.txt`, `l4d_tank_on_spawn.cfg` | `plugins/`, `translations/`, `gamedata/`, `cfg/sourcemod/` |
+
+---
+
+# Tank on Spawn - Ziggy Modified Settings
+
+Current config file:
+
+```bash
+/mnt/l4d2/l4d2-server/left4dead2/cfg/sourcemod/l4d_tank_on_spawn.cfg
+```
+
+Important settings:
+
+```cfg
+l4d_tank_on_spawn_enabled "1"
+l4d_tank_on_spawn_versus_only "1"
+l4d_tank_on_spawn_force_every_map "1"
+l4d_tank_on_spawn_one_tank_alive "1"
+l4d_tank_on_spawn_enable_duplicate "0"
+l4d_tank_on_spawn_countmode "1"
+l4d_tank_on_spawn_count "1"
+l4d_tank_on_spawn_countlimit "1"
+l4d_tank_on_spawn_delay_min "45.0"
+l4d_tank_on_spawn_delay_max "90.0"
+l4d_tank_on_spawn_control_hp "0"
+```
+
+Behavior summary:
+
+```text
+Normal director Tank appears first -> plugin does not add another Tank.
+No Tank appears before the delay -> plugin forces one Tank.
+A Tank is already alive -> plugin does not spawn another one.
+A second Tank somehow appears -> plugin removes the extra Tank.
+```
 
 ---
 
