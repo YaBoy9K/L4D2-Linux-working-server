@@ -244,7 +244,7 @@ Start it again:
 ```bash
 screen -S l4d2
 cd /mnt/l4d2/l4d2-server
-./srcds_run -game left4dead2 -console -usercon -ip 0.0.0.0 -port 27015 +map c8m1_apartment +maxplayers 8 +sv_gametypes versus +sv_allow_lobby_connect_only 0
+./srcds_run -game left4dead2 -console -usercon -ip 0.0.0.0 -port 27015 +mp_gamemode versus +map c8m1_apartment versus +maxplayers 8 +sv_gametypes versus +sv_allow_lobby_connect_only 0
 ```
 
 Detach:
@@ -322,7 +322,7 @@ Most days, you only need these commands.
 ```bash
 screen -S l4d2
 cd /mnt/l4d2/l4d2-server
-./srcds_run -game left4dead2 -console -usercon -ip 0.0.0.0 -port 27015 +map c8m1_apartment +maxplayers 8 +sv_gametypes versus +sv_allow_lobby_connect_only 0
+./srcds_run -game left4dead2 -console -usercon -ip 0.0.0.0 -port 27015 +mp_gamemode versus +map c8m1_apartment versus +maxplayers 8 +sv_gametypes versus +sv_allow_lobby_connect_only 0
 ```
 
 ## Detach from server
@@ -355,3 +355,107 @@ Then in the server console:
 ```text
 quit
 ```
+
+
+---
+
+# Tank on Spawn Commands and Checks
+
+The server uses the modified Tank on Spawn plugin:
+
+```text
+[L4D] Tank on Spawn (1.30-ziggy1)
+```
+
+## Open Tank menu
+
+Run in chat or server console/RCON:
+
+```text
+sm_tank
+sm_tanks
+```
+
+## Vote/admin helper commands from the plugin
+
+```text
+sm_votepass
+sm_veto
+```
+
+## Reload only Tank on Spawn
+
+Run in the server console:
+
+```text
+sm plugins reload l4d_TankOnSpawn
+```
+
+If it is unloaded, load it with:
+
+```text
+sm plugins load l4d_TankOnSpawn
+```
+
+## Confirm the plugin is loaded
+
+```text
+sm plugins list
+```
+
+Expected line:
+
+```text
+"[L4D] Tank on Spawn" (1.30-ziggy1)
+```
+
+## Check the important TankOnSpawn ConVars
+
+Run from server console/RCON:
+
+```text
+sm_cvar l4d_tank_on_spawn_enabled
+sm_cvar l4d_tank_on_spawn_versus_only
+sm_cvar l4d_tank_on_spawn_force_every_map
+sm_cvar l4d_tank_on_spawn_one_tank_alive
+sm_cvar l4d_tank_on_spawn_enable_duplicate
+sm_cvar l4d_tank_on_spawn_control_hp
+```
+
+Expected values:
+
+```text
+enabled = 1
+versus_only = 1
+force_every_map = 1
+one_tank_alive = 1
+enable_duplicate = 0
+control_hp = 0
+```
+
+## Edit the TankOnSpawn config
+
+```bash
+nano /mnt/l4d2/l4d2-server/left4dead2/cfg/sourcemod/l4d_tank_on_spawn.cfg
+```
+
+After editing the config, restart the server or reload the plugin.
+
+## Compile the modified TankOnSpawn source
+
+Upload/copy the `.sp` file to:
+
+```bash
+/mnt/l4d2/l4d2-server/left4dead2/addons/sourcemod/scripting/l4d_TankOnSpawn.sp
+```
+
+Compile and install:
+
+```bash
+cd /mnt/l4d2/l4d2-server/left4dead2/addons/sourcemod/scripting
+./spcomp l4d_TankOnSpawn.sp
+cp l4d_TankOnSpawn.smx ../plugins/l4d_TankOnSpawn.smx
+rm l4d_TankOnSpawn.smx
+```
+
+The `.smx` in `plugins/` is the file SourceMod actually runs. The `.sp` file is only source code.
